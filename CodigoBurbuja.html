@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Burbuja Ascen. y Descen.</title>
+</head>
+<body>
+    <script>
+        tamaño = parseInt(prompt("Favor ingresar el tamaño del arreglo: "));
+            vec1 = new Array(tamaño); 
+    
+            for(var i=0; i<tamaño; i++){
+                cad1= parseInt(prompt("Favor de ingresar el valor " + i ));
+                vec1[i] = cad1;
+                function comparar(a,b){
+                    return a-b; 
+                }
+                function comparar2(a,b){
+                    return b-a;
+                }
+            }
+    
+            document.write("El tamaño del arreglo es: " + tamaño + "<br>")
+            document.write("Los números que ingresaste son: "+vec1+"<br>"); 
+
+            function Ascendente(){
+                alert("Ascendente: " + vec1.sort(comparar));
+            }
+
+            function Descendente(){
+                alert("Descente: " + vec1.sort(comparar2));
+            }
+        
+    </script>  
+        <input type="submit" value="Ordenar Ascendente" onclick="Ascendente()">
+        <input type="submit" value="Ordenar Descendente" onclick="Descendente()">
+</body>
+</html>
